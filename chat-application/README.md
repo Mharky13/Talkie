@@ -35,7 +35,7 @@ Open the URL printed by Vite, normally `http://localhost:5173`. The frontend def
 
 ## Deploying the frontend
 
-Netlify hosts the Vite frontend, but the FastAPI service and MySQL database must be hosted separately. In Netlify, set the base directory to `chat-application` when the repository root is `Talkie`, the build command to `npm run build`, and the publish directory to `dist`. Set the `VITE_API_URL` environment variable to the public FastAPI URL. Set `TALKIE_DATABASE_URL`, `TALKIE_TOKEN_SECRET`, and `TALKIE_ALLOWED_ORIGINS` on the API host; use the Netlify site URL in `TALKIE_ALLOWED_ORIGINS`. Never use `localhost` as the production API or database host.
+Netlify hosts the Vite frontend, but the FastAPI service and MySQL database must be hosted separately. A Render blueprint is included at the repository root. Create a Render web service from that blueprint, then set `TALKIE_ALLOWED_ORIGINS` on the API service to the Netlify site URL and copy the API service URL into Netlify as `VITE_API_URL`. Set `TALKIE_DATABASE_URL` on the API host when using MySQL; otherwise the local SQLite database is suitable for testing only. In Netlify, use the base directory `chat-application`, build command `npm run build`, and publish directory `dist`. Never use `localhost` as the production API or database host.
 
 ## Using Talkie
 

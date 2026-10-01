@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { ArrowRight, Check, Clock3, Compass, Copy, ImagePlus, LogIn, LogOut, MessageCircle, MessageSquare, Moon, Paperclip, Plus, Send, Sun, Trash2, UserPlus, Users, X } from 'lucide-react'
+import { ArrowRight, Check, Clock3, Compass, Copy, ImagePlus, LogIn, LogOut, MessageCircle, MessageSquare, MessageSquareText, Moon, Paperclip, Plus, Send, Sun, Trash2, UserPlus, Users, X } from 'lucide-react'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001'
 
@@ -552,7 +552,7 @@ function AuthPage({ mode }) {
 
   return (
     <main className="auth-page">
-      <Link to="/chat" className="auth-brand"><span><MessageCircle size={21} /></span> talkie</Link>
+      <Link to="/chat" className="auth-brand"><span><MessageSquareText size={21} /></span> talkie</Link>
       <section className="auth-panel">
         <div className="auth-mark">{isRegister ? <UserPlus size={23} /> : <LogIn size={23} />}</div>
         <span className="page-eyebrow">A PLACE TO PICK UP WHERE YOU LEFT OFF</span>

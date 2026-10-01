@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import {
   ArrowDown, ChevronDown, ChevronRight, Compass, Expand, Hash, Headphones,
-  ImagePlus, Mic, MicOff, MessageCircle, MessageSquare, MoreHorizontal, Moon, Phone, PhoneOff, Plus, Search, Send,
+  ImagePlus, Mic, MicOff, MessageCircle, MessageSquare, MessageSquareText, MoreHorizontal, Moon, Phone, PhoneOff, Plus, Search, Send,
   Minimize2, Settings, Smile, Sparkles, Sun, Users, Video, VideoOff, Volume2, VolumeX, X,
 } from 'lucide-react'
 import { BrowserRouter, Link, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
@@ -496,7 +496,7 @@ function ChatWorkspace({ theme, setTheme }) {
   return (
     <main className={`chat-app ${page !== 'chat' ? 'page-mode' : ''}`}>
       <aside className="server-rail" aria-label="Spaces">
-        <NavLink className="brand-mark" title="Talkie home" to="/chat"><MessageCircle size={22} strokeWidth={2.4} /></NavLink>
+        <NavLink className="brand-mark" title="Talkie home" to="/chat"><MessageSquareText size={22} strokeWidth={2.4} /></NavLink>
         <div className="rail-divider" />
         <NavLink to="/chat" end className={({ isActive }) => `page-nav-button ${isActive ? 'selected' : ''}`} title="Chat"><MessageCircle size={19} /></NavLink>
         <NavLink to="/messages" className={({ isActive }) => `page-nav-button ${isActive ? 'selected' : ''}`} title="Direct messages"><MessageSquare size={19} /></NavLink>

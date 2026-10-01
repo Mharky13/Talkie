@@ -1,0 +1,23 @@
+:root {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #30312e;
+  background: #e9e8e1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #30312e;
+  --muted: #8a8b83;
+  --line: #e9e9e3;
+  --paper: #fffefa;
+  --sidebar: #f5f4ee;
+  --green: #c9f36a;
+  --green-dark: #516b27;
+  letter-spacing: 0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { color: inherit; }
+#root { min-height: 100vh; }
+::selection { background: #d5f59a; color: #263417; }
